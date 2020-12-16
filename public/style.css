@@ -40,6 +40,11 @@ p {
   color: rgba(0, 0, 0, 0.87);
 }
 
+header {
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
 header .header-top {
   padding: 20px;
   display: flex;
@@ -89,6 +94,9 @@ header .header-bottom .box-menu ul li a {
   font-weight: 600;
 }
 
+main #faq {
+  padding-top: 100px;
+}
 main #faq .container {
   display: flex;
   align-items: center;
@@ -103,4 +111,30 @@ main #faq .container .box-faq h2 {
   margin-bottom: 20px;
   font-weight: 600;
   font-size: 24px;
+}
+main #faq .container .box-question p {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+footer {
+  background: #f5f5f5;
+  padding: 10px 0;
+}
+footer .container {
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .box-left .box-menu ul {
+  display: flex;
+  align-items: center;
+}
+footer .container .box-left .box-menu ul li a {
+  margin-right: 10px;
+  font-size: 11px;
+  font-weight: 300;
 }

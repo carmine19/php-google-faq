@@ -1,6 +1,9 @@
 // header
 
 header {
+  position: fixed;
+  width: 100%;
+  background: $bg_header;
 
   .header-top {
     padding: 20px;

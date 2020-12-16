@@ -24,9 +24,16 @@ $question = [
     ],
     [
         "domanda" => "Quando faccio clic sui risultati della Ricerca Google, le mie chiavi di ricerca vengono inviate ai siti web?",
-        "rispoata" => ["In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."]
+        "risposta" => ["In alcuni casi sì. Quando fai clic su un risultato della Ricerca Google, il tuo browser web potrebbe reindirizzare alla pagina web di destinazione anche l'indirizzo Internet, o URL, della pagina dei risultati di ricerca sotto forma di URL referrer. Talvolta, l'URL della pagina dei risultati di ricerca potrebbe contenere la query di ricerca che hai inserito. Se utilizzi la ricerca SSL (la funzione di ricerca criptata di Google), nella maggior parte dei casi i termini di ricerca non vengono inviati come parte dell'URL negli URL referrer. Questo comportamento può fare eccezione, ad esempio se utilizzi alcuni browser meno diffusi. Ulteriori informazioni sulla ricerca SSL sono disponibili qui. Le query di ricerca o le informazioni contenute nell'URL referrer potrebbero essere disponibili mediante Google Analytics o un'API (Application Programming Interface). Inoltre, gli inserzionisti potrebbero ricevere informazioni relative all' esatte parole chiave che hanno determinato il clic su un annuncio."]
     ],
-]
+];
+
+$footer_menu = ['Google','Tutto su Google','Privacy','Termini'];
+
+$country = ['Russia','Germania','Francia','Spagna','Olanda','Italia'];
+
+$page_title = 'Domande Frequenti...'
+
 
  ?>
 <!doctype html>
@@ -40,7 +47,7 @@ $question = [
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="public/style.css">
-    <title>Document</title>
+    <title><?php echo $page_title ?></title>
 </head>
 <body>
 
@@ -67,8 +74,7 @@ $question = [
     <div class="header-bottom">
         <div class="box-menu">
             <ul>
-                <?php
-                foreach ($menus as $menu) { ?>
+                <?php foreach ($menus as $menu) { ?>
                     <li>
                         <a href=""><?php echo $menu ?></a>
                     </li>
@@ -79,12 +85,12 @@ $question = [
         </div>
     </div>
 </header>
-
+<!-- fine header -->
+<!-- main -->
 <main>
     <section id="faq">
         <div class="container">
             <?php foreach ($question as $ele => $key_ele) { ?>
-
                     <div class="box-faq">
                         <div class="box-title">
                             <h2>
@@ -92,30 +98,42 @@ $question = [
                             </h2>
                         </div>
                         <div class="box-question">
-                            <ul>
                                 <?php foreach ($key_ele['risposta'] as $f_ele => $risposte) {  ?>
-                                    <li> <?php echo $risposte; ?> </li>
+                                    <p> <?php echo $risposte;;?> </p>
                                 <?php
                                 } ?>
-                            </ul>
                         </div>
                     </div>
-            <?php
-            }
-            ?>
+            <?php } ?>
         </div>
     </section>
 </main>
-
-<!-- <div class="box-faq">
-                <div class="box-title">
-                    <h2>Domanda</h2>
-                </div>
-                <div class="box-question">
-                    <p>lorem ipsum</p>
-                </div>
-            </div> -->
-
+<!-- fine main -->
+<!-- footer -->
+<footer>
+    <div class="container">
+        <div class="box-left">
+            <div class="box-menu">
+                <ul>
+                    <?php foreach ($footer_menu as $footer_link) { ?>
+                    <li>
+                        <a href=""><?php echo $footer_link ?></a>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+        <div class="box-right">
+            <div class="box-country">
+                <select id="country">
+                    <?php foreach ($country as $city) { ?>
+                        <option value="" selected><?php echo $city ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+        </div>
+    </div>
+</footer>
 
 </body>
 </html>
