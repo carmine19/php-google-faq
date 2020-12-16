@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: $a_color;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  color: $h2_color;
+}
+
+p {
+  color: $p_color;
+}

@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #5f6368;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  color: #3c4043;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+header .header-top {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-top .box-left {
+  display: flex;
+  align-items: center;
+}
+header .header-top .box-left .box-logo {
+  margin-right: 5px;
+}
+header .header-top .box-left .box-logo img {
+  width: 80px;
+  display: block;
+}
+header .header-top .box-left .box-text a {
+  font-size: 22px;
+}
+header .header-top .box-right {
+  display: flex;
+  align-items: center;
+}
+header .header-top .box-right .box-icon i {
+  font-size: 20px;
+  margin-right: 25px;
+}
+header .header-top .box-right .box-avatar img {
+  width: 32px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+header .header-bottom {
+  height: 30px;
+  padding-left: 20px;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.5);
+}
+header .header-bottom .box-menu ul {
+  display: flex;
+  align-items: center;
+}
+header .header-bottom .box-menu ul li a {
+  margin-right: 40px;
+  padding: 0 0 6px 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+main #faq .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 120px;
+}
+main #faq .container .box-faq {
+  margin-top: 100px;
+}
+main #faq .container .box-faq h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 24px;
+}
